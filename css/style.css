@@ -1,0 +1,649 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+
+:root {
+    --primary: #4992FC;
+    --dark: #1F2632;
+    --body: #616773;
+    --white: #ffffff;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+/*--------------------------------------------------------------
+# Global css
+--------------------------------------------------------------*/
+body {
+    font-family: 'Work Sans', sans-serif;
+    color: #616773;
+}
+
+a {
+    color: #616773;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4992FC;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+}
+.opacity-0 { opacity: 0; }
+.opacity-25 { opacity: .25; }
+.opacity-50 { opacity: .5; }
+.opacity-75 { opacity: .75; }
+.opacity-100 { opacity: 1; }
+.mps-primary-blue{color: var(--primary);}
+.section-h6{font-size: 16.5px; line-height: 20px; letter-spacing: 3px; text-transform: uppercase; color: var(--dark);}
+.section-h2{font-size: 46px; line-height: 56px; color: var(--dark); letter-spacing: 1px;}
+.section-p{font-size: 18px; color: #616773;}
+.s-space{padding-top: 120px;padding-bottom: 120px;}
+.s-space-top-240{padding-top: 240px;}
+.s-space-btm-120{padding-bottom: 120px;}
+.rounded-48{border-radius: 50%; width: 48px; height: 48px; display: inline-block;}
+.btn-circle{border: 1px solid #D0D7E7; font-size: 24px; color: #ABB0BB;}
+.btn-circle.active, .case-studies .btn-circle:hover{color: var(--primary);}
+.get-in-tuch-btn{letter-spacing: 3px; font-size: 18px; line-height: 21px; text-transform: uppercase; font-weight: 500; display: inline-block;}
+.bg-light-gray{background-color: #F4F8FB;}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+#header .navbar{letter-spacing: 0.5px;}
+#header .navbar .nav-link {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+#header .navbar-scroll .navbar a, .navbar a:focus{color: inherit;}
+.navbar a, .navbar a:focus{color: #fff;}
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+    color:var(--primary);
+}
+.navbar .join-our-team,#send-message-btn,.high-tech-btn,
+.navbar .join-our-team:focus,#send-message-btn:focus,.high-tech-btn:focus {
+    padding: 8px 20px;
+    margin-left: 30px;
+    color: #fff;
+    font-size: 16px;
+    border: 2px solid var(--primary);
+    display: inline-block;
+    background: var(--primary);
+}
+.navbar-scroll .navbar .join-our-team,#send-message-btn,.high-tech-btn,
+.navbar-scroll .navbar .join-our-team:focus,#send-message-btn:focus,.high-tech-btn:focus {
+    padding: 8px 20px;
+    margin-left: 30px;
+    color: #fff;
+    font-size: 16px;
+    border: 2px solid var(--primary);
+    display: inline-block;
+    background: var(--primary);
+}
+.navbar .join-our-team:hover,#send-message-btn:hover,.high-tech-btn:hover
+.navbar .join-our-team:focus:hover, #send-message-btn:focus:hover,.high-tech-btn:focus:hover {
+    color: var(--primary);
+    background: var(--white);
+}
+.navbar .getstarted,
+.navbar .getstarted:focus {
+    padding: 8px 20px;
+    margin-left: 30px;
+    color: #fff;
+    font-size: 16px;
+    border: 2px solid var(--white);
+    display: inline-block;
+}
+.navbar-scroll .navbar .getstarted,
+.navbar-scroll .navbar .getstarted:focus {
+    padding: 8px 20px;
+    margin-left: 30px;
+    color: var(--dark);
+    font-size: 16px;
+    border: 2px solid var(--dark);
+    display: inline-block;
+    background-color: transparent;
+}
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+    color: #fff;
+    background: var(--primary);
+}
+.navbar-scroll .navbar .getstarted:hover,
+.navbar-scroll .navbar .getstarted:focus:hover {
+    color: #fff;
+    background: var(--primary);
+    border: 2px solid var(--primary);
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon i {
+    color: #fff;
+    font-size: 1.864rem;
+}
+.navbar-scroll .navbar-toggler-icon i {
+    color: #1F2632;
+    font-size: 1.864rem;
+}
+.navbar-scroll .navbar-brand-dark{display: block;}
+.navbar-scroll .navbar-brand{display: none;}
+.navbar-brand-dark{display: none;}
+.hidden {display: none!important;visibility: hidden!important;}
+#navbar-close i {font-size: 28px;color: #fff;height: 30px;width: 30px;}
+.navbar-scroll #navbar-close i {color: rgb(0, 0, 0);}
+/* mobile view */
+@media (max-width:500px) {
+    #header .navbar-nav {
+        background-color: #fff;
+        border-top: 3px solid var(--primary);
+        color: var(--dark);
+        z-index: 1;
+        margin-top: 5px;
+        padding-left: 1rem;
+        padding-bottom: 1.4rem;
+    }
+
+    #header .navbar .nav-link {
+        color: var(--dark);
+        padding-left: 0;
+        padding-right: 0.5rem;
+    }
+
+    .navbar .getstarted,
+    .navbar .getstarted:focus {
+        color: var(--dark);
+        border: 2px solid var(--primary);
+        margin-left: 0;
+    }
+    .navbar .join-our-team,
+    .navbar .join-our-team:focus {
+    margin-left: 0;
+    margin-bottom: 0.75rem;
+}
+
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+    width: 100%;
+    height: 90vh;
+    background-image: url(../img/hearo-banner-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+#hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(31, 38, 50, 0.1);
+    z-index: -1;
+}
+.carousel-item:nth-child(2)::after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.6);
+  }
+#hero h1 {
+    color: var(--white);
+    font-size: 52px;
+    letter-spacing: 0.5px;
+}
+
+
+#hero h2 {
+    color: var(--white);
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+/*--------------------------------------------------------------
+# Case Studies Section
+--------------------------------------------------------------*/
+#case-tudies{}
+.case-studies .view-all-btn{color: var(--primary); font-weight: 500; font-size: 18px;}
+.case-studies .btn-circle{border: 1px solid #D0D7E7; font-size: 24px; color: #ABB0BB;}
+.case-studies .btn-circle.active, .case-studies .btn-circle:hover{color: var(--primary);}
+.case-studies .card{border-radius: 0rem; border: 0;}
+.case-studies .card .icon{padding-top: 30px; padding-bottom: 20px;}
+.case-studies .card h4{color: #000; font-weight: 500; font-size: 26px;}
+.case-studies .card p{font-size: 16px; margin-bottom: 0;}
+/* mobile css */
+@media (max-width:767px){
+    .case-studies .col-6{width: 100%;}
+}
+/*--------------------------------------------------------------
+# what we do Section
+--------------------------------------------------------------*/
+#what-we-do {margin-bottom: -100px;}
+.get-in-tuch{margin-top: 50px;}
+.get-in-tuch a{color: var(--primary); transition: 0.3s;}
+.get-in-tuch a:hover{color: var(--dark);}
+/* mobile css */
+@media (max-width:767px){
+    #what-we-do {margin-bottom: 0; padding-bottom: 120px; padding-top: 0px;}
+    #what-we-do .col-img{margin-bottom: 1rem;}
+}
+/*--------------------------------------------------------------
+# what we offer Section
+--------------------------------------------------------------*/
+.what-we-offer{background: linear-gradient(180deg, #2F73D5 0%, #2F73D5 100%);}
+.what-we-offer .icon-box{color: var(--white); padding: 54px 20px 50px 50px; border: 1px solid #4388EC;}
+.what-we-offer .icon-box .icon{margin-bottom: 12px;}
+.what-we-offer .icon-box h4{font-size: 26px; line-height: 30px; margin-bottom: 20px;}
+.what-we-offer .icon-box p{font-size: 18px; line-height: 21px; font-weight: 400; opacity: 0.8;}
+.what-we-offer .icon-box .icon-box-btn{font-size: 24px; margin-top: 10px;}
+.what-we-offer .icon-box .icon-box-btn a{color: #fff;}
+/* mobile css */
+@media (max-width:767px){
+    #what-we-offer.s-space-top-240{padding-top: 120px;}
+}
+/*--------------------------------------------------------------
+# Our Customers Section
+--------------------------------------------------------------*/
+.our-customers .member .pic{padding-top:50px; padding-bottom: 30px;}
+.our-customers .member .members-info{margin-bottom: 30px;}
+.our-customers .member .members-info h4{font-size: 20px; color: var(--dark); letter-spacing: 3px; text-transform: uppercase; line-height: 24px;}
+.our-customers .member .members-info p{font-size: 18px; line-height: 28px;}
+.our-customers .member h5{font-size: 18px; line-height: 24px; color: var(--dark); margin-bottom: 0;}
+.our-customers .member span{font-size: 16px; color:#616773; font-weight: 400;}
+/*--------------------------------------------------------------
+# our partners Section
+--------------------------------------------------------------*/
+.our-partners img{transition: all 0.4s ease-in-out; display: inline-block; padding: 15px 0;}
+/*--------------------------------------------------------------
+# our team Section
+--------------------------------------------------------------*/
+.our-team.col-img{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/our-team/img-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+/*--------------------------------------------------------------
+# careers Section
+--------------------------------------------------------------*/
+#careers-section {margin-top: -60px; z-index: 99; position: relative;}
+/* mobile css */
+@media (max-width:1200px){
+    #careers-section{margin-top: 0px; padding-top: 120px;}
+    #careers-section .get-in-tuch{margin-bottom: 1rem;}
+}
+/*--------------------------------------------------------------
+# Footer Section
+--------------------------------------------------------------*/
+#footer{
+   padding-bottom: 60px;
+   padding-top: 60px;
+   background-color: var(--dark);
+}
+#footer p{font-size: 14px;}
+#footer li, #footer li a, #footer {color: rgba(255, 255, 255, 0.7);}
+#footer li a:hover{color: var(--primary);}
+#footer .ft-title-1{font-size: 16.5px; letter-spacing: 3px; line-height: 20px; text-transform: uppercase; margin-bottom: 1rem;}
+
+/*--------------------------------------------------------------
+# Inner pages styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# inr menu Section
+--------------------------------------------------------------*/
+.inr-header{padding: 0 !important;}
+.inr-header .navbar a, .navbar a:focus{color: inherit;}
+.inr-header .navbar .join-our-team, .navbar .join-our-team:focus{color: #fff;}
+.inr-header .navbar .join-our-team:hover, .navbar .join-our-team:focus:hover{color: var(--primary);}
+.inr-header .navbar .getstarted, .navbar .getstarted:focus{border: 2px solid var(--dark);}
+.inr-header .navbar .getstarted:hover, .navbar .getstarted:focus:hover{border: 2px solid var(--primary);}
+/* header banner custom style */
+.hero-imag-data {
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1
+}
+#carouselExampleSlidesOnly {width: 100vw;height: 90vh;}
+.carousel-inner img {width: 100%;height: 90vh;position: relative;}
+.hero-data {position: absolute;top: 35%;}
+.hero-img {object-fit: cover;}
+.control-arrows{position: relative; margin-bottom: -100px;}
+#hero .carousel-control-prev {
+    right: 64px !important;
+    left: auto;
+    top: auto;
+    bottom: 30px;
+}
+#hero .carousel-control-next {
+    top: auto;
+    bottom: 30px;
+}
+#bg-img-overly:hover{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../img/lapbgimg.png");
+    background-size: cover;background-repeat: no-repeat;background-position: center;filter: brightness(90%);height: 100%;
+    cursor: pointer;
+}
+.our-cust-data {overflow-x: hidden;}
+ /* our customers slick elements dots modification */
+.slick-dots {display: flex;margin: 0;padding: 0;}
+.slick-list {margin-bottom: 2rem;}
+.slick-dots li.slick-active {
+    background-color: #0b82dd !important;
+    width: 2rem;
+    height: 10px;
+    margin-top: 2px;
+    margin-left: -6px;
+    border-radius: 1rem;
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:before {
+    content: '•';
+    font-size: 22px;
+    line-height: 20px;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    opacity: .25;
+    color: gray;
+}
+
+
+/* inr our teams page */
+#inr-our-story{margin-bottom: -200px; padding-top: 180px;}
+.what-we-believe .icon-box .icon{margin-bottom: 1rem;}
+.what-we-believe .icon-box h4{color: #1F2632;}
+.team-member-info{position: relative; margin-bottom: 40px;}
+.member-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 380px;
+    height: 420px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0,0,0,0.7);
+  }
+  .team-member-info:hover .member-overlay {
+    opacity: 1;
+  }
+  .member-text{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.team-member-info h4{color: #000;}
+/* Style all font awesome icons */
+.fab {
+    padding: 10px;
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    text-decoration: none;
+  }
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  /* Set a specific color for each brand */
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .inr-working-at-matchps .job-featured{border: 1px solid #D7DCDF; padding: 32px; margin-bottom: 1rem;}
+  .inr-working-at-matchps .job-featured .icon{float:left; position: relative; text-align: center; display: inline-block;}
+  .inr-working-at-matchps .job-featured .content{padding-left: 100px;}
+  .inr-working-at-matchps .job-featured .content h3{font-size: 23px; font-weight: 500; color: #000;}
+  .inr-working-at-matchps .job-featured .content .tags{margin-bottom: 24px;}
+  .inr-working-at-matchps .job-featured .content .tags span{margin-right: 1rem;}
+  .inr-working-at-matchps .pagination .page-item .page-link{border: none; color: var(--dark);}
+  .inr-working-at-matchps .pagination .page-item.active .page-link{color: #fff;}
+  .inr-working-at-matchps .pagination .page-item.active .page-link{background-color: var(--primary);}
+  /* mobile styles */
+  @media (max-width:767px){
+    .member-overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+      .member-text p{display: none;}
+} 
+
+.hero-video video {width: auto; height: 90vh;background-size: cover;}
+@media (max-width: 426px){.section-h2{font-size: 34px;line-height: 36px;}}
+
+@media (max-width: 768px){.offset-md-3 {margin-left: 0%; }}
+
+/* inr our teams page */
+#inr-our-story,#inr-services,#inr-success-stories,#inr-insights,#inr-high-tech,#inr-industries,#inr-uber-case-studies,#inr-uber,#inr-latest-post-details,#inr-we-help{margin-bottom: -200px; padding-top: 180px;}
+#inr-result{padding-top: 100px;height: 75vh;}
+#inr-about-uber{ padding-top: 400px;}
+.picture-img{margin: 1rem;}
+
+/*--------------------------------------------------------------
+# contactus Section
+--------------------------------------------------------------*/
+#inr-contactus-section {margin-top:100px; z-index: 99;position: relative;}
+#inr-contactus-image{margin-bottom: -11.5rem;}#inr-contact-data-section{margin-bottom: -6rem;}
+/* mobile css */
+
+/*--------------------------------------------------------------
+# form-section Section
+--------------------------------------------------------------*/
+.inr-form-section{background-color: #F4F8FB;} 
+@media(max-width:991px){#inr-contactus-image{margin-bottom: 0.5rem;}#inr-contact-data-section{margin-bottom: 1rem;}}
+input[type=text] {border-radius: 0%;} #inr-form-btn{padding-right: 1px;}
+#text-area{height: 150px;border-radius: 0%;}
+
+/*---------------------------------------------------------------
+#insights
+----------------------------------------------------------------*/
+
+.insights-arrow{color: var(--primary);font-size: 2rem;}
+.insights-arrow:hover{color:blue;}
+
+
+/*---------------------------------------------------------------
+#strategy-consulting
+----------------------------------------------------------------*/
+/* .section-h2{font-size: 44px;} */
+#strategy-consulting-img{margin-bottom: -15rem;}
+@media(max-width:990px){#strategy-consulting-img{margin-bottom: 0rem;}}
+/*---------------------------------------------------------------
+high-tech
+-----------------------------------------------------------------*/
+.inr-high-tech-bg-img{ background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../img/high-tech/image\ 12\ \(1\).jpg");
+background-size: cover;background-repeat: no-repeat;background-position: center;filter: brightness(90%);height: 100%;}
+.hightech-img-border{height: 121px;width: 206px;border:1.5px solid rgb(224, 222, 222);background-color: white; margin: 6px;}
+@media(max-width:415px){.hightech-img-border{width: 180px;}}@media(max-width:376px){.hightech-img-border{width: 135px;}}
+.a-low-down-hightech{color: #616773;font-weight: 600;}
+input[type=text].hightech-form-class{background: none;color: white;border: 2px solid #D2DEE7;}
+input[type=text].hightech-form-class::placeholder{color: white;}
+
+/*---------------------------------------------------------------
+industries
+-----------------------------------------------------------------*/
+.industries-bg-img-1{ background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../img/industries-imgs/industries-bg-img/Rectangle\ 495.jpg");
+    background-size: cover;background-repeat: no-repeat;background-position: center;filter: brightness(90%);height: 100%;}
+.industries-bg-img-2{ background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../img/industries-imgs/industries-bg-img/Rectangle\ 495\ \(1\).jpg");
+    background-size: cover;background-repeat: no-repeat;background-position: center;filter: brightness(90%);height: 100%;}
+.industries-bg-img-3{ background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../img/industries-imgs/industries-bg-img/Rectangle\ 495\ \(2\).jpg");
+    background-size: cover;background-repeat: no-repeat;background-position: center;filter: brightness(90%);height: 100%;}
+.industries-bg-img-4{ background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../img/industries-imgs/industries-bg-img/Rectangle\ 495\ \(3\).jpg");
+    background-size: cover;background-repeat: no-repeat;background-position: center;filter: brightness(90%);height: 100%;}
+.industries-bg-img-5{ background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../img/industries-imgs/industries-bg-img/Rectangle\ 495\ \(4\).jpg");
+    background-size: cover;background-repeat: no-repeat;background-position: center;filter: brightness(90%);height: 100%;}
+.industries-bg-img-6{ background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../img/industries-imgs/industries-bg-img/Rectangle\ 495\ \(5\).jpg");
+    background-size: cover;background-repeat: no-repeat;background-position: center;filter: brightness(90%);height: 100%;}
+.inr-industries-bg-img{ background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../img/industries-imgs/industries-bg-img/portrait-woman-customer-service-worker\ \(2\)\ 1\ 1.jpg");
+    background-size: cover;background-repeat: no-repeat;background-position: center;filter: brightness(90%);height: 100%;}
+.industries-bg-img-1,.industries-bg-img-2,.industries-bg-img-3,.industries-bg-img-4,.industries-bg-img-5,.industries-bg-img-6{height: 400px;}
+.indusrties-bgimg-data{padding-top: 18rem; font-style: italic;}.indusrties-data{font-style: italic;}
+@media(max-width:280px){.indusrties-bgimg-data{padding-top: 15rem;}}
+.visible-data {height: 0;opacity: 0;visibility: hidden;margin: 5px;line-height: 1.5em;}
+.industries-bg-img-1:hover .indusrties-bgimg-data,.industries-bg-img-2:hover .indusrties-bgimg-data,.industries-bg-img-3:hover .indusrties-bgimg-data,.industries-bg-img-4:hover .indusrties-bgimg-data,.industries-bg-img-5:hover .indusrties-bgimg-data,.industries-bg-img-6:hover .indusrties-bgimg-data{ padding-top: 1rem;}
+.industries-bg-img-1:hover p,.industries-bg-img-2:hover p,.industries-bg-img-3:hover p,.industries-bg-img-4:hover p,.industries-bg-img-5:hover p,.industries-bg-img-6:hover p{height: 5rem;opacity: 1;visibility: visible;transition: all .2s ease;}
+
+/*-------------------------------------------------------------------
+ uber
+ ------------------------------------------------------------------- */
+.uber-data{background-color: var(--white);}
+.uber-datas{border:1px solid #DCE1E4;border-radius: 5px;}.uber-img{margin-top: -15rem;}@media(max-width:1024px){.uber-img{margin-top: 0rem;}}
+.result-img{width: 100vw;}.about-border{border: 1px solid #DCE1E4;height: 302px;}
+.about-borders{border: 1px solid #DCE1E4;height: 219px;}
+@media(max-width:1024px){#inr-about-uber { padding-top: 200px;}}
+.num-data{font-weight: bold;font-size: 70px;line-height: 82px;text-align: center;letter-spacing: -0.5px;color: #2F73D5;}
+
+/* latest-post -details */
+.sed-commodo{font-style: italic;font-weight: normal;font-size: 32px;line-height: 38px;color: #1F2632;}
+.latest-bar{width: 6px;height: 84px;background: #4992FC;}
+.author-line{border-top: 1px solid rgb(214, 210, 210); border-bottom: 1px solidrgb(214, 210, 210);}
+.pre-data{font-size: 18px; line-height: 21px; letter-spacing: 3px; text-transform: uppercase; color: #4992FC;}
+@media(max-width:1025px){.small-data{display: block;}}.cmt-reply{color: var(--primary);}
+.latest-post-data{margin-left: 52px;}@media(max-width:775px){.latest-post-data{margin-left:2px;}}
+
+/* media quaries */
+@media(max-width:476px){#hero h1 {color: var(--white); font-size: 17px;letter-spacing: 0.3px;
+}}
+
+#navbar-toggler-icons i{color: black;}
+
+#validationDefault011,#validationDefault021{background: transparent;border: 1px solid white;}
+
+/* 05/05/22 */
+
+.brd{
+    border-top-width: 10px;
+    border-top-color: #4992FC;
+    border-top-style: solid;
+    box-shadow: 2px 2px 8px 2px #d5d0d0;
+}.brd1{
+ border: 1px solid rgb(66, 65, 65);font-weight: bolder;
+}
+.brd-img{margin-left: 45%;}
+.brd-text{margin-left: 2rem;}.brds-text{font-weight: bolder;}
+.member-border{border: 1px solid #ccc;}
+.member-border:hover{border: 2px solid #ccc; box-shadow: 2px 2px 8px 2px #ccc;}
+.prev_arrow{
+    position: absolute;
+    left: -12px;
+    top: calc(40% - 10px);
+}
+.next_arrow{
+    position: absolute;
+    right: -12px;
+    bottom: calc(60% - 10px);
+}
+.font-arrow-left::before {
+    content: "\f12f";
+}
+.roadmap-icon {
+    width: 70px;
+    padding: 10px;
+    border: 4px double #000;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #4992fc;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 1.8rem;
+}
+
+.roadmap-inner {
+    border: 5px solid #4992fc;
+}
+
+#inr-roadmap {
+    padding-top: 120px;
+}
+
+#inr-mvp {
+    padding-top: 180px;
+}
+
+.show-desc {
+    display: none;
+    transition: all 5s ease-in-out;
+}
+
+.roadmap-each:hover>.show-desc {
+    display: block;
+}
+
+}

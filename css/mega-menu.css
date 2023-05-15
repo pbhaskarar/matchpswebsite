@@ -1,0 +1,65 @@
+.navbar-scroll{background-color: #ffffff;
+    padding: 0;
+    position: fixed;
+    top:0;
+    z-index: 99;
+    box-shadow:0px 1px 10px rgba(0,0,0,0.4);
+    transition-duration: 0.6s; }
+    .navbar-scroll .getstarted {color: #ffffff;
+    background-color: #4992FC;
+    border: 2px solid #4992FC;
+    }
+    .navbar-scroll .logo{color: #000;
+    font-weight: 500;
+    }
+    .navbar-scroll .navbar a, .navbar a:focus{color: inherit;}
+.navigation-wrap.scroll-on .nav-link { color:#1F2632;}
+#header .navbar .has-megamenu{padding-right: 0.75rem; }
+#header .navbar .megamenu{ padding: 1rem; border: 0; border-radius: 0; margin-top: 24px; border-top: 1px solid #e9ecef;}
+
+.megamenu ul li a {    display: block;    color: #222;    padding: 3px 5px;  }
+.megamenu ul li a:hover,  .megamenu ul li a:focus { text-decoration: none;  }
+#header .navbar .dropdown .nav-link{position: relative;}
+#header .navbar .dropdown a.nav-link:after{
+    content: '';
+    border: solid;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    margin-left: 0.45rem;
+    margin-top: 0.45rem;
+    transition: 0.5s;
+}
+#header .navbar .dropdown a.nav-link:hover::after{
+    content: '';
+    border: solid;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    position: absolute;
+    margin-left: 0.45rem;
+    margin-top: 0.7rem;
+    transition: 0.5s;
+}
+.hidden {display: none!important;visibility: hidden!important;}
+#navbar-close i {font-size: 28px;color: #fff;height: 30px;width: 30px;}
+.scroll-on #navbar-close i {color: rgb(0, 0, 0);}
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+	.navbar .has-megamenu{position:static!important;}
+	.navbar .megamenu{left:0; right:0; width:100%; margin-top:0px;  visibility: visible;}
+	
+}	
+/* ============ desktop view .end// ============ */
+
+
+/* ============ mobile view ============ */
+@media(max-width: 991px){
+	.navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{overflow-y: auto;	max-height: 90vh;margin-top:10px;	}
+}
+/* ============ mobile view .end// ============ */
